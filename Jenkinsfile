@@ -30,7 +30,7 @@ pipeline {
                 docker run -d \
                   --name nginx-lb \
                   --network app-network \
-                  -p 80:80 \
+                  -p 8085:8085 \
                   nginx
 
                 docker cp nginx/default.conf nginx-lb:/etc/nginx/conf.d/default.conf
